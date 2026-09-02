@@ -1,0 +1,1 @@
+HomeCare module: request, provider matching, consent, scheduled visit, location capture during the relevant workflow, arrival/departure events, encounter record, payment and receipt. Location collection must be purpose-limited and consent-based.

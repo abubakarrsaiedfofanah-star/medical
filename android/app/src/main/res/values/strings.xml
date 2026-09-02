@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SAIED Healthcare</string>
+    <string name="title_activity_main">SAIED Healthcare</string>
+    <string name="package_name">com.saied.healthcare</string>
+    <string name="custom_url_scheme">com.saied.healthcare</string>
+</resources>

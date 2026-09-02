@@ -1,0 +1,1 @@
+Medical records must use minimum-necessary access. Keep an immutable audit trail for sensitive reads/writes. Patients should control sharing where legally applicable; providers should only access records necessary for the encounter.

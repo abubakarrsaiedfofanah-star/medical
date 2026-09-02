@@ -1,0 +1,36 @@
+{
+  "name": "saied-medical",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "cap:add:android": "npx cap add android",
+    "cap:sync": "npm run build && npx cap sync android",
+    "cap:open:android": "npx cap open android",
+    "android:build": "npm run cap:sync && cd android && gradlew.bat assembleDebug",
+    "android:release": "npm run cap:sync && cd android && gradlew.bat assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.4.3",
+    "@supabase/supabase-js": "^2.56.0",
+    "lucide-react": "^0.468.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.8.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}

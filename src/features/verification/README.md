@@ -1,0 +1,1 @@
+Provider verification should capture license/registration details, document review, status, reviewer, timestamps and expiry. Integrate with the relevant national regulator instead of treating self-declared registration as verified.

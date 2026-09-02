@@ -1,0 +1,1 @@
+Pharmacy module: drug catalogue, batch/lot, expiry, stock, price, prescription validation, dispensing, substitutions, refunds, delivery/pickup, controlled access and receipt QR verification. Follow local pharmacy/medicine laws.

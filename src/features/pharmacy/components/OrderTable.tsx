@@ -1,0 +1,4 @@
+import {MoreHorizontal} from 'lucide-react';
+import type {PharmacyOrder} from '../types/pharmacy';
+
+export default function OrderTable({orders}:{orders:PharmacyOrder[]}){return <div className="table-wrap"><table><thead><tr><th>Order</th><th>Patient</th><th>Items</th><th>Total</th><th>Status</th><th>Created</th><th/></tr></thead><tbody>{orders.map((order)=><tr key={order.id}><td><strong>{order.id}</strong></td><td>{order.patient}</td><td>{order.items}</td><td><strong>KSh {order.total.toLocaleString()}</strong></td><td><span className={`order-pill ${order.status.toLowerCase()}`}>{order.status}</span></td><td>{order.createdAt}</td><td><button type="button" className="table-more" title={`More options for ${order.id}`} aria-label={`View options for ${order.id}`} onClick={()=>window.alert(`${order.id} for ${order.patient}: ${order.status}`)}><MoreHorizontal size={17}/></button></td></tr>)}</tbody></table></div>}

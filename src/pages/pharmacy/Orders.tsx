@@ -1,0 +1,6 @@
+import {useMemo,useState} from 'react'; import {Download,Plus} from 'lucide-react';
+import PharmacyNav from '../../features/pharmacy/components/PharmacyNav';
+import OrderTable from '../../features/pharmacy/components/OrderTable';
+import {orderService} from '../../features/pharmacy/services/orderService';
+import {ExportButton,PageHead} from './Inventory';
+export default function Orders(){const [filter,setFilter]=useState('All'); const orders=useMemo(()=>orderService.getRecent().filter(order=>filter==='All'||order.status===filter),[filter]); return <div className="pharmacy-shell"><PharmacyNav/><main className="pharmacy-main"><PageHead eyebrow="PRESCRIPTION FULFILMENT" title="Orders" text="Process prescriptions and keep patients moving." action="Create order" icon={<Plus size={18}/>} destination="/pharmacy"/><section className="pharmacy-panel"><div className="toolbar"><div className="filter-tabs">{['All','Processing','Ready','Collected'].map(value=><button type="button" className={filter===value?'selected':''} onClick={()=>setFilter(value)} key={value}>{value}</button>)}</div><ExportButton rows={orders.map(order=>[order.id,order.patient,order.status,String(order.total)])}/></div><OrderTable orders={orders}/></section></main></div>}
